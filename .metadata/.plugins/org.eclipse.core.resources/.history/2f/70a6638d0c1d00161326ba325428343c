@@ -1,0 +1,19 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Problem25 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the number:");
+		BigInteger num = sc.nextBigInteger();
+		BigInteger i = BigInteger.ONE;
+
+		BigInteger product = BigInteger.ONE;
+		do {
+			product = product.multiply(i);
+			i.add(BigInteger.ONE);
+		} while (i.intValue() <= num.intValue());
+		System.out.println(product);
+	}
+}

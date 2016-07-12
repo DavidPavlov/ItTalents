@@ -1,0 +1,78 @@
+package core;
+
+import java.util.ArrayList;
+
+import models.Child;
+import models.ElConsumer;
+import models.Family;
+import models.YoungCoupleWithChildren;
+
+public class Engine {
+
+	private IO io = new IO();
+	private ArrayList<Family> families;
+	private int population;
+
+	public void run() {
+		String line = io.readLine();
+		int count = 1;
+		while (!line.equals("Democracy")) {
+			if (count == 3) {
+				count = 0;
+				this.paySalaries();
+			}
+			runCommand(line);
+
+			count++;
+			line = io.readLine();
+		}
+	}
+
+	private void runCommand(String line){
+		if(line.equals("EVN")){
+			this.io.print(this.printTotal());
+		}else if(line.equals("EVN bill")){
+			this.billPeople();
+		}else
+	}
+
+	private String printTotal() {
+		double bill = 0;
+		for (Family family : families) {
+			if (family instanceof YoungCoupleWithChildren) {
+				for (Child child : ((YoungCoupleWithChildren) family).getChildren()) {
+					bill += child.getFoodCost();
+					bill += child.getToyCosts();
+				}
+			}
+			bill += family.getRoomsElCost();
+			for (ElConsumer cons : family.getConsumers()) {
+				bill += cons.getElCost();
+			}
+		}
+		return String.format("Total consumption: %.1f", bill);
+	}
+
+	private void billPeople() {
+		for (Family family : families) {
+			double bill = 0;
+			if (family instanceof YoungCoupleWithChildren) {
+				for (Child child : ((YoungCoupleWithChildren) family).getChildren()) {
+					bill += child.getFoodCost();
+					bill += child.getToyCosts();
+				}
+			}
+			bill += family.getRoomsElCost();
+			for (ElConsumer cons : family.getConsumers()) {
+				bill += cons.getElCost();
+			}
+			family.payBill(bill);
+		}
+	}
+
+	private void paySalaries() {
+		for (Family family : families) {
+			family.paySalary();
+		}
+	}
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+<fullyQualifiedTypeName name="StringTask1"/>
+<fullyQualifiedTypeName name="Computer"/>
+<fullyQualifiedTypeName name="Call"/>
+<fullyQualifiedTypeName name="GSM"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="Student"/>
+<fullyQualifiedTypeName name="StudentGroup"/>
+<fullyQualifiedTypeName name="employees.Task"/>
+<fullyQualifiedTypeName name="employees.Employee"/>
+<fullyQualifiedTypeName name="wargame.Card"/>
+<fullyQualifiedTypeName name="java.lang.Iterable"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="wargame.Player"/>
+<fullyQualifiedTypeName name="wargame.CardFactory"/>
+<fullyQualifiedTypeName name="wargame.Engine"/>
+<fullyQualifiedTypeName name="Inheritance.Person"/>
+<fullyQualifiedTypeName name="Inheritance.Student"/>
+<fullyQualifiedTypeName name="Inheritance.Employee"/>
+<fullyQualifiedTypeName name="models.Person"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="models.Family"/>
+<fullyQualifiedTypeName name="models.ElConsumer"/>
+<fullyQualifiedTypeName name="models.Child"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="models.YoungCouple"/>
+<fullyQualifiedTypeName name="models.YoungCoupleWithChildren"/>
+<fullyQualifiedTypeName name="core.Engine"/>
+<fullyQualifiedTypeName name="core.IO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="core.FamilyFactory"/>
+<fullyQualifiedTypeName name="models.OldCouple"/>
+<fullyQualifiedTypeName name="models.AloneYoung"/>
+<fullyQualifiedTypeName name="models.AloneOld"/>
+<fullyQualifiedTypeName name="abstraction.Vehicle"/>
+</qualifiedTypeNameHistroy>
