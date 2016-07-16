@@ -1,0 +1,47 @@
+package employees;
+
+public class AllWork {
+	
+	private static final int TASKS_SIZE = 10;
+	
+	private Task[] tasks;
+	private int freePlacesForTasks;
+	private int currentUnassignedTask;
+	
+	public AllWork() {
+		this.tasks = new Task[TASKS_SIZE];
+		this.freePlacesForTasks = TASKS_SIZE;
+		this.currentUnassignedTask = 0;
+	}
+	
+	public void addTask(Task task){
+		if(this.freePlacesForTasks <= 0){
+			System.out.println("There is no free place for tasks");
+			return;
+		}
+		this.tasks[TASKS_SIZE-freePlacesForTasks] = task;
+		this.freePlacesForTasks--;
+	}
+	
+	public Task getNextTask(){
+		if(this.currentUnassignedTask >= TASKS_SIZE){
+			System.out.println("There is no next task");
+			return null;
+		}
+		Task task = this.tasks[this.currentUnassignedTask];
+		this.currentUnassignedTask++;
+		return task;
+	}
+	
+	public boolean isAllWorkDone(){
+		boolean isAllWorkDone = true;
+		
+		for (Task task : this.tasks) {
+			if(task.getWorkingHours()>0){
+				isAllWorkDone = false;
+				break;
+			}
+		}
+		return isAllWorkDone;
+	}
+}

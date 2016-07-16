@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Wed May 11 19:04:42 EEST 2016
-org.eclipse.jst.jee.server\:HelloWorld=E\:\\ee\\apache-tomcat-8.0.33\\wtpwebapps\\HelloWorld
