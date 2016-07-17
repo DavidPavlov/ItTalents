@@ -1,0 +1,53 @@
+package models;
+
+import java.util.Scanner;
+
+import contracts.ISecuredNotepad;
+
+public class SecuredNotepad extends SimpleNotepad implements ISecuredNotepad{
+	
+	private String password;
+	
+	public SecuredNotepad(String password) {
+		super();
+		this.password = password;
+	}
+
+	@Override
+	public void addTextToPage(String text, int pageNumber) {
+		this.passWordValidation();
+		super.addTextToPage(text, pageNumber);
+	}
+
+	@Override
+	public void clearPageAndAddText(String text, int pageNumber) {
+		this.passWordValidation();
+		super.clearPageAndAddText(text, pageNumber);
+	}
+
+	@Override
+	public void clearPage(int pageNumber) {
+		this.passWordValidation();
+		super.clearPage(pageNumber);
+	}
+
+	@Override
+	public void previewNotepad() {
+		this.passWordValidation();
+		super.previewNotepad();
+	}
+	
+	private boolean passWordValidation(){
+		String pass = this.getPassword();
+		return pass.equals(this.password);
+	}
+	
+	private String getPassword(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the password");
+		String pass = sc.nextLine();
+		sc.close();
+		return pass;
+		
+	}
+}

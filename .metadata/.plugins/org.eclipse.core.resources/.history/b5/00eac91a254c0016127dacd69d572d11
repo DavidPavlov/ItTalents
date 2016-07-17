@@ -1,0 +1,25 @@
+package demo;
+
+import models.Page;
+import models.SimpleNotepad;
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		Page first = new Page("FirstPage");
+		Page second = new Page("Second");
+		Page third = new Page("Third");
+		Page fourth = new Page("Fourth");
+		first.addText("Some shit in the new page...");
+		System.out.println(first.pagePreview());
+		
+		SimpleNotepad belejnik = new SimpleNotepad();
+		belejnik.addPage(first);
+		belejnik.addPage(second);
+		belejnik.addPage(third);
+		belejnik.addPage(fourth);
+		belejnik.addTextToPage("Adding some text", 2);
+		belejnik.addTextToPage("Third page is cool", 3);
+		belejnik.addTextToPage("fourth page is cooler", 4);
+	}
+}

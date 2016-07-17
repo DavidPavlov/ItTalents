@@ -1,0 +1,15 @@
+package demo;
+
+import models.Page;
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		Page first = new Page("FirstPage");
+		Page second = new Page("Second");
+		Page third = new Page("Third");
+		Page fourth = new Page("Fourth");
+		first.addText("Some shit in the new page...");
+		first.pagePreview();
+	}
+}
